@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dibujos | Portafolio</title>
+
+<link rel="stylesheet" href="../ESTILO/gallery.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body class="drawing">
+
+<!--================ HERO ================-->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="subtitle">
+PORTAFOLIO ARTÍSTICO
+</span>
+
+<h1>DIBUJOS</h1>
+
+<p>
+
+Una colección de ilustraciones, bocetos y arte digital desarrollados para comunicar ideas,
+emociones y creatividad mediante diferentes técnicas de dibujo.
+
+</p>
+
+<a href="../index.html" class="btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+&nbsp; Volver al Portafolio
+
+</a>
+
+</div>
+
+</section>
+
+<!--================ CONTENIDO ================-->
+
+<section class="container">
+
+<div class="info">
+
+<div class="card">
+
+<h2>Sobre este proyecto</h2>
+
+<p>
+
+Cada ilustración nace de una idea y pasa por un proceso de investigación,
+bocetación y desarrollo hasta convertirse en una pieza visual terminada.
+Esta colección reúne trabajos tradicionales y digitales realizados
+durante mi formación.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Herramientas</h2>
+
+<div class="tools">
+
+<span>Illustrator</span>
+
+<span>Photoshop</span>
+
+<span>Procreate</span>
+
+<span>Lápiz HB</span>
+
+<span>Tableta Gráfica</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!--================ GALERÍA ================-->
+
+<section class="gallery">
+
+<div class="item">
+
+<img src="C:\Users\JUAN SANCHEZ\OneDrive\Escritorio\TRABAJO TECNOLOGO\monterrosa\PROYECTOS\img\dibujo1.jpeg" alt="Ilustración 1">
+
+<h3 class="item-title">Ilustración 01</h3>
+
+</div>
+
+<div class="item">
+
+<img src="C:\Users\JUAN SANCHEZ\OneDrive\Escritorio\TRABAJO TECNOLOGO\monterrosa\PROYECTOS\img\dibujo2.jpeg" alt="Ilustración 2">
+
+<h3 class="item-title">Ilustración 02</h3>
+
+</div>
+
+<div class="item">
+
+<img src="C:\Users\JUAN SANCHEZ\OneDrive\Escritorio\TRABAJO TECNOLOGO\monterrosa\PROYECTOS\img\dibujo3.jpeg" alt="Ilustración 3">
+
+<h3 class="item-title">Ilustración 03</h3>
+
+</div>
+
+<div class="item">
+
+<img src="C:\Users\JUAN SANCHEZ\OneDrive\Escritorio\TRABAJO TECNOLOGO\monterrosa\PROYECTOS\img\dibujo4.jpeg" alt="Ilustración 4">
+
+<h3 class="item-title">Ilustración 04</h3>
+
+</div>
+
+<div class="item">
+
+<img src="C:\Users\JUAN SANCHEZ\OneDrive\Escritorio\TRABAJO TECNOLOGO\monterrosa\PROYECTOS\img\dibujo5.jpeg" alt="Ilustración 5">
+
+<h3 class="item-title">Ilustración 05</h3>
+
+</div>
+
+<div class="item">
+
+<img src="C:\Users\JUAN SANCHEZ\OneDrive\Escritorio\TRABAJO TECNOLOGO\monterrosa\PROYECTOS\img\dibujo6.jpeg" alt="Ilustración 6">
+
+<h3 class="item-title">Ilustración 06</h3>
+
+</div>
+
+</section>
+
+<!--================ LIGHTBOX ================-->
+
+<div id="lightbox">
+
+<span id="close">&times;</span>
+
+<img id="lightbox-img" src="" alt="Imagen ampliada">
+
+</div>
+
+<!--================ FOOTER ================-->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h2>DIBUJOS</h2>
+
+        <p>
+            Gracias por visitar esta galería artística.
+            Cada ilustración representa creatividad, práctica y evolución
+            dentro de mi proceso como diseñador multimedia.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <span>
+            © 2026 Juan Diego Sánchez García | Todos los derechos reservados.
+        </span>
+
+    </div>
+
+</footer>
+
+<!--================ SCRIPT LIGHTBOX ================-->
+
+<script>
+
+const galleryImages=document.querySelectorAll(".gallery .item img");
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImg=document.getElementById("lightbox-img");
+
+const close=document.getElementById("close");
+
+galleryImages.forEach(img=>{
+
+    img.addEventListener("click",()=>{
+
+        lightbox.style.display="flex";
+
+        lightboxImg.src=img.src;
+
+    });
+
+});
+
+close.onclick=()=>{
+
+    lightbox.style.display="none";
+
+}
+
+lightbox.onclick=(e)=>{
+
+    if(e.target===lightbox){
+
+        lightbox.style.display="none";
+
+    }
+
+}
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key==="Escape"){
+
+        lightbox.style.display="none";
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
